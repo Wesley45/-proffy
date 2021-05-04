@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from "react";
+import React, {useState, FormEvent} from "react";
 
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
@@ -58,16 +58,16 @@ function TeacherList() {
               setSubject(e.target.value);
             }}
             options={[
-              { value: "Artes", label: "Artes" },
-              { value: "Biologia", label: "Biologia" },
-              { value: "Ciências", label: "Ciências" },
-              { value: "Educação física", label: "Educação física" },
-              { value: "Física", label: "Física" },
-              { value: "Geografia", label: "Geografia" },
-              { value: "História", label: "História" },
-              { value: "Matemática", label: "Matemática" },
-              { value: "Português", label: "Português" },
-              { value: "Química", label: "Química" },
+              {value: "Artes", label: "Artes"},
+              {value: "Biologia", label: "Biologia"},
+              {value: "Ciências", label: "Ciências"},
+              {value: "Educação física", label: "Educação física"},
+              {value: "Física", label: "Física"},
+              {value: "Geografia", label: "Geografia"},
+              {value: "História", label: "História"},
+              {value: "Matemática", label: "Matemática"},
+              {value: "Português", label: "Português"},
+              {value: "Química", label: "Química"},
             ]}
           />
 
@@ -79,13 +79,13 @@ function TeacherList() {
               setWeekDay(e.target.value);
             }}
             options={[
-              { value: "0", label: "Domingo" },
-              { value: "1", label: "Segunda-feira" },
-              { value: "2", label: "Terça-feira" },
-              { value: "3", label: "Quarta-feira" },
-              { value: "4", label: "Quinta-feira" },
-              { value: "5", label: "Sexta-feira" },
-              { value: "6", label: "Sábado" },
+              {value: "0", label: "Domingo"},
+              {value: "1", label: "Segunda-feira"},
+              {value: "2", label: "Terça-feira"},
+              {value: "3", label: "Quarta-feira"},
+              {value: "4", label: "Quinta-feira"},
+              {value: "5", label: "Sexta-feira"},
+              {value: "6", label: "Sábado"},
             ]}
           />
 
@@ -108,7 +108,7 @@ function TeacherList() {
           return (
             <article className="teacher-item">
               <header>
-                <img src={teacher.avatar} alt="" />
+                <img src={teacher.avatar} alt=""/>
                 <div>
                   <strong>{teacher.name}</strong>
                   <span>{teacher.subject}</span>
@@ -126,13 +126,38 @@ function TeacherList() {
                   rel="noopener noreferrer"
                   onClick={() => createNewConnection(teacher.id)}
                 >
-                  <img src={whatsappIcon} alt="Whatsapp" />
+                  <img src={whatsappIcon} alt="Whatsapp"/>
                   Entrar em contato
                 </a>
               </footer>
             </article>
           );
         })}
+        <article className="teacher-item">
+          <header>
+            <img src="http://localhost/drterapia/imagens/98ba9cc8a163f2587dce47066df121d3.png" alt=""/>
+            <div>
+              <strong>Wesley Santos</strong>
+              <span>Terapeuta</span>
+            </div>
+          </header>
+          <p>Entusiasta das melhores tecnologias de química avançada.
+            Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais
+            de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+          <footer>
+            <p>
+              Preço/hora
+              <strong>R$ 20,00</strong>
+            </p>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={whatsappIcon} alt="Whatsapp"/>
+              Entrar em contato
+            </a>
+          </footer>
+        </article>
       </main>
     </div>
   );
